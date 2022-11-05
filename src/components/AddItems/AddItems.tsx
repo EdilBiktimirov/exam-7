@@ -1,11 +1,11 @@
 import React from 'react';
-import FoodBtn from "../FoodBtn/FoodBtn";
 import {Menu} from "../../types";
-import './AddItems.css'
+import FoodBtn from "../FoodBtn/FoodBtn";
+import './AddItems.css';
 
 interface AddItemsProps extends React.PropsWithChildren {
   menu: Menu[];
-  onFoodClick: (name: string, id: number) => void
+  onFoodClick: (name: string, id: number) => void;
 }
 
 const AddItems: React.FC<AddItemsProps> = (props) => {
@@ -19,6 +19,7 @@ const AddItems: React.FC<AddItemsProps> = (props) => {
               name={item.name}
               price={item.price}
               onBtnClick={() => props.onFoodClick(props.menu[index].name, props.menu[index].id)}
+              img={item.img}
               key={item.name + item.price + index}/>
           );
         })}

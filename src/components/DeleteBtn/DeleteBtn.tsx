@@ -1,6 +1,7 @@
-import React, {PropsWithChildren} from 'react';
+import React from 'react';
+import './DeleteBtn.css';
 
-interface DeleteBtnProps extends PropsWithChildren {
+interface DeleteBtnProps {
   onBtnClick: React.MouseEventHandler;
 }
 
@@ -8,7 +9,7 @@ const DeleteBtn: React.FC<DeleteBtnProps> = (props) => {
 
   return (
     <div>
-      <button type={"button"} onClick={props.onBtnClick}>Delete</button>
+      <button className="DeleteBtn" type={"button"} onClick={props.onBtnClick}></button>
     </div>
   );
 };

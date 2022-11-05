@@ -1,16 +1,22 @@
 import React, {useState} from 'react';
-import './App.css';
 import {Menu} from "./types";
 import AddItems from "./components/AddItems/AddItems";
 import Order from "./components/Order/Order";
+import burgerImg from "./assets/burger.png";
+import cocaColaImg from "./assets/cocaCola.png";
+import friesImg from "./assets/fries.png";
+import sandwichImg from "./assets/sandwitch.png";
+import cheeseburgerImg from "./assets/cheeseburger.png";
+import coffeeImg from "./assets/coffee.png";
+import './App.css';
 
 const MENU: Menu[] = [
-  {name: 'Burger', price: 110, id: 0},
-  {name: 'Coca-cola', price: 50, id: 1},
-  {name: 'Fries', price: 60, id: 2},
-  {name: 'Sandwich', price: 100, id: 3},
-  {name: 'Cheeseburger', price: 120, id: 4},
-  {name: 'Coffee', price: 40, id: 5},
+  {name: 'Burger', price: 110, img: burgerImg, id: 0},
+  {name: 'Coca-cola', price: 50,img: cocaColaImg, id: 1},
+  {name: 'Fries', price: 60,img: friesImg, id: 2},
+  {name: 'Sandwich', price: 100,img: sandwichImg, id: 3},
+  {name: 'Cheeseburger', price: 120,img: cheeseburgerImg, id: 4},
+  {name: 'Coffee', price: 40, img: coffeeImg,id: 5},
 ];
 
 function App() {
@@ -36,7 +42,6 @@ function App() {
 
   const deleteOrderItem = (name: string) => {
     setOrder(prev => prev.map(elem => {
-
       return elem.name === name ? {
         ...elem,
         count: 0,
@@ -48,12 +53,11 @@ function App() {
   const getTotalPrice = () => {
     let total = 0;
     order.forEach(item => {
-      total += item.price
+      total += item.price;
     })
 
     return total;
   };
-
 
   return (
     <div className="App">

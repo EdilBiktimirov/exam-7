@@ -1,7 +1,7 @@
 import React, {PropsWithChildren} from 'react';
+import {Items} from "../../types";
 import FoodItem from "../FoodItem/FoodItem";
 import TotalPrice from "../TotalPrice/TotalPrice";
-import {Items} from "../../types";
 import './Order.css';
 
 interface OrderProps extends PropsWithChildren {
@@ -14,7 +14,7 @@ const Order: React.FC<OrderProps> = (props) => {
 
   return (
       <div className="Order">
-        <h3>Order details</h3>
+        <h3>Order details:</h3>
         {props.items.map((item, index) => {
 
             if (item.count !== 0) {

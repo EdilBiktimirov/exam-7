@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface TotalPriceProps extends React.PropsWithChildren {
+interface TotalPriceProps {
   price: number;
 }
 
