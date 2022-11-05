@@ -1,0 +1,8 @@
+.AddItems {
+    flex-basis: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    min-height: 350px;
+}

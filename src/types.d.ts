@@ -4,3 +4,9 @@ export interface Menu {
   img?: string;
   id: number;
 }
+
+export interface Items {
+  name: string;
+  count: number;
+  price: number;
+}

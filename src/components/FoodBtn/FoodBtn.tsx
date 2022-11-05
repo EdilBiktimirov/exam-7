@@ -1,4 +1,5 @@
 import React, {PropsWithChildren} from 'react';
+import './FoodBtn.css'
 
 interface FoodBtnProps extends PropsWithChildren {
   name: string;
@@ -8,10 +9,12 @@ interface FoodBtnProps extends PropsWithChildren {
 
 const FoodBtn: React.FC<FoodBtnProps> = (props) => {
 
-
   return (
-    <div>
-      <button type={"button"} onClick={props.onBtnClick}>{props.name} Price: {props.price} KGS</button>
+    <div className="FoodBtnDiv">
+      <button className="FoodBtn" type={"button"} onClick={props.onBtnClick}>
+        <span>{props.name}</span>
+        <span>{props.price} KGS</span>
+      </button>
     </div>
   );
 };

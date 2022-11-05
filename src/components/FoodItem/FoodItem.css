@@ -1,0 +1,17 @@
+.FoodItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.FoodItemName {
+    width: 200px;
+}
+
+.FoodItemCount {
+    width: 25px;
+}
+
+.FoodItemPrice {
+    width: 100px;
+}
